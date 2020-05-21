@@ -8,8 +8,8 @@ This buildpack was created by following this [Sendgrid tutorial](https://sendgri
 To use:
 
 ```
-heroku create -b https://github.com/rodreegez/heroku-ortools-buildpack.git
+heroku create -b https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 # _or if your app is already created_
-heroku config:add BUILDPACK_URL=https://github.com/rodreegez/heroku-ortools-buildpack.git
+heroku config:add BUILDPACK_URL=https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 git push heroku master
 ```
