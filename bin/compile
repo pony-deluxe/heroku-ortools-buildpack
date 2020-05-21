@@ -14,7 +14,7 @@ tar -C $1/or-tools -xvf or-tools_ubuntu-18.04_v7.6.7691.tar.gz
 
 # CD to binary
 cd $1/or-tools
-echo $(pwd)
+echo $(ls)
 
 # Test binary
 make test_cc
