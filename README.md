@@ -10,6 +10,6 @@ To use:
 ```
 heroku create -b https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 # _or if your app is already created_
-heroku config:add BUILDPACK_URL=https://github.com/pony-deluxe/heroku-ortools-buildpack.git
+heroku buildpacks:add --index 1 https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 git push heroku master
 ```
