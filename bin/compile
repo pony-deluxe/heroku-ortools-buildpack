@@ -3,25 +3,17 @@ echo "-----> Installing OR Tools 7.6.7691"
 # change to the the BUILD_DIR ($1)
 cd $1
 
-# Check if or-tools already exists in the cache
-if [ -f "$2/or-tools" ]; then
-  echo "-----> Or Tools is present in cache"
-else
-  # download the binary (-O) silently (-s)
-  wget https://github.com/google/or-tools/releases/download/v7.6/or-tools_ubuntu-18.04_v7.6.7691.tar.gz
+# download the binary (-O) silently (-s)
+wget https://github.com/google/or-tools/releases/download/v7.6/or-tools_ubuntu-18.04_v7.6.7691.tar.gz
 
-  # make a directory to untar (like unzip) the binary
-  mkdir -p $2/or-tools
+# make a directory to untar (like unzip) the binary
+mkdir -p $1/or-tools
 
-  # unzip to cache directory
-  tar -C $2/or-tools -xvf or-tools_ubuntu-18.04_v7.6.7691.tar.gz
-fi
+# untar binary
+tar -C $1/or-tools -xvf or-tools_ubuntu-18.04_v7.6.7691.tar.gz
 
-# Copy cached binary to build directory
-cp -r $2/or-tools $1/or-tools
+# CD to binary
+cd $1/or-tools
 
-# CD to or-tools installation
-cd $1/or-tools/or-tools_ubuntu-18.04_v7.6.7691
-
-# Test ordrtools is installed correctly
+# Test binary
 make test_cc
