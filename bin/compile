@@ -20,6 +20,8 @@ fi
 # Copy cached binary to build directory
 cp -r $2/or-tools $1/or-tools
 
-# Ensure binary has sane permissions allowing it to be executed
-chmod a+x $1/or-tools
+# CD to or-tools installation
+cd $1/or-tools/or-tools_ubuntu-18.04_v7.6.7691
 
+# Test ordrtools is installed correctly
+make test_cc
