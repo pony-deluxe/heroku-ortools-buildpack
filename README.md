@@ -13,3 +13,8 @@ heroku create -b https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 heroku buildpacks:add --index 1 https://github.com/pony-deluxe/heroku-ortools-buildpack.git
 git push heroku master
 ```
+
+## TODO:
+
+- [ ] Cache OR Tools between builds
+- [ ] Don't test OR Tools on every deploy
