@@ -18,3 +18,4 @@ git push heroku master
 
 - [ ] Cache OR Tools between builds
 - [ ] Don't test OR Tools on every deploy
+- [ ] Extract OR Tools to a more sensible directory
